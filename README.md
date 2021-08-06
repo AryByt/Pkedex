@@ -8,4 +8,4 @@ Lokking into adding more Pokemons using a third party API instead of just gettin
 
 ### Deployment
 
-The Deployed Link [deployment](https://pkedex.netlify.app/)
+ [The Deployed Link](https://pkedex.netlify.app/)
