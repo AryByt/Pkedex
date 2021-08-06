@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Pokecard from './Pokecard';
-import './Pokedex.css';
-class Pokedex extends Component {
+import Pokedex from './Pokedex';
+class Pokegame extends Component {
   static defaultProps = {
     pokemon: [
       { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
@@ -15,18 +14,23 @@ class Pokedex extends Component {
     ],
   };
   render() {
+    let handOne = [];
+    let handTwo = [...this.props.pokemon];
+    while (handOne.length < handTwo.length) {
+      let randomIndex = Math.floor(Math.random() * handTwo.length);
+      let randomPokemon = handTwo.splice(randomIndex, 1)[0];
+      handOne.push(randomPokemon);
+    }
+    let expOne = handOne.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+    let expTwo = handTwo.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+
     return (
-      <div className="Pokedex">
-        <h1>Pokedex!</h1>
-        <p>Total Experience: {this.props.exp}</p>
-        <p>{this.props.isWinner ? 'You Won' : 'You Lost'}</p>
-        <div className="Pokedex-cards">
-          {this.props.pokemon.map(p => (
-            <Pokecard id={p.id} name={p.name} exp={p.base_experience} type={p.type} />
-          ))}
-        </div>
+      <div>
+        <Pokedex pokemon={handOne} exp={expOne} isWinner={expOne > expTwo} />
+        <Pokedex pokemon={handTwo} exp={expTwo} isWinner={expTwo > expOne} />
       </div>
     );
   }
 }
-export default Pokedex;
+
+export default Pokegame;
