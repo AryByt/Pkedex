@@ -5,6 +5,8 @@
 ## Figma
 I used figma to style this application, as to give me a more clear picture on how the site should look!
 
+ [Figma Link For The Design](https://www.figma.com/file/0MoeryLUzRyV9Ol1Ap0nLP/Untitled?node-id=0%3A1)
+
 ## Next Stpes
 Lokking into adding more Pokemons using a third party API instead of just getting the data for the images. 
  
