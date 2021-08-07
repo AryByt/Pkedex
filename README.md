@@ -3,7 +3,7 @@
 - a small application where users can play a small pokemon cards game from the pre-set pokemons.Used a third party API for the image src.
 
 ## Figma
-I used figma to style this application, as to give me a more clear picture on how the site should look!
+I used figma come up with the design idea for this application, as to give me a more clear picture on how the site should look!
 
  [Figma Link For The Design](https://www.figma.com/file/0MoeryLUzRyV9Ol1Ap0nLP/Untitled?node-id=0%3A1)
 
